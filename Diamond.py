@@ -2,10 +2,10 @@
 #-*-encoding: utf-8 -*-
 
 
-class Diamond:
+class Diamond(object):
+    """Classe utilizada para imprimir o formato de um diamante com letras"""
 
-
-    __letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    __letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
     #esta imprimindo do lado inverso (parte de baixo do diamante)?
     __isReversed = False
@@ -46,7 +46,6 @@ class Diamond:
         else:
             print self.__printSpaces(self.__outSpace + 1),
             print self.__letters[index]
-            #inSpace = 1
 
         #enquanto nao encontra a letra no vetor de letras e nao estiver na impressao reversa
         if ((self.__letters[index] != self.__letter) & (self.__isReversed is False)):
