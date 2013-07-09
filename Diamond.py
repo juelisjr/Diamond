@@ -19,7 +19,7 @@ class Diamond(object):
     #quantidade de espacos do lado de dentro - entre as letras
     __inSpace = None
 
-    def printDiamond(self, letter):
+    def __init__(self, letter):
         """Metodo que ira configurar os atributos e iniciar a impressao do diamante"""
 
         #transforma a letra passando por parametro em maiuscula
@@ -32,8 +32,10 @@ class Diamond(object):
         #a quantidade inicial de espacos de dentro (= 0)
         self.__inSpace = self.__outSpace - self.__outSpace
 
-        #depois de configurarmos os atributos, imprimimos linha a linha
-        self.__printLine()
+    def __call__(self):
+        """Faz sua classe ser callable (se comportar como um método)
+        """
+        return self.__printLine()
 
     def __printLine(self, index=0):
         """Metodo que imprimira linha a linha do diamante recursivamente"""
@@ -71,3 +73,8 @@ class Diamond(object):
     def __printSpaces(self, quantity):
         """Imprimi os espacos"""
         return " " * quantity
+
+if __name__ == '__main__':
+    letra = raw_input("Digite uma letra para fazer a impressao do Diamante: ")
+    d = Diamond(letra)
+    d()
