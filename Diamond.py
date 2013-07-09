@@ -27,7 +27,7 @@ class Diamond:
 
         #recupera a quantidade inicial de espacos do lado de fora
         #a quantidade de espacos inicial = ao indice da letra no vetor (de letras)
-        self.__outSpace = 4
+        self.__outSpace = self.__letters.index(self.__letter)
 
         #a quantidade inicial de espacos de dentro (= 0)
         self.__inSpace = self.__outSpace - self.__outSpace
