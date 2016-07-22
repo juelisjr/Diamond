@@ -71,7 +71,7 @@ class Diamond(object):
                 self.__printLine(index)
 
     def __printSpaces(self, quantity):
-        """Imprimi os espacos"""
+        """Imprimi os espacos """
         return " " * quantity
 
 if __name__ == '__main__':
