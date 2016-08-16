@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*-encoding: utf-8 -*-
-
+#Developed by Juelis Jr. (juelis.jr@outlook.com)
 
 class Diamond(object):
     """Classe utilizada para imprimir o formato de um diamante com letras"""
